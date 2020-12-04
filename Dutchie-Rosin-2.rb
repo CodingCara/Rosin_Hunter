@@ -1,6 +1,7 @@
 require 'wannabe_bool'
 require 'httparty'
 require 'sqlite3'
+require 'json'
 require 'colorize'
 require 'pry'
 
