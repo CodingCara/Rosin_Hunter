@@ -5,9 +5,10 @@ require 'json'
 require 'colorize'
 require 'pry'
 
-#Insert a check to remove Accessories and other such nonsense to reduce on databsae size and insertion time. Current runtime is 3.5+hours.
+######Insert a check to remove Accessories and other such nonsense to reduce on databsae size and insertion time. Current runtime is 3.5+hours.
 #Create INSERT for THC/CBD content linked via ProductID in a different able. Or perhaps in a productID table itself, with a new schema?
-#Categories to remove:
+#
+#######	 - ALPHA DONE - Categories to remove:
 #Accessories
 #Apparel
 #Topicals
@@ -104,11 +105,19 @@ puts caneme[:name]
 
 for circles in 0..@loopcounter-1
 
+
+@ProductType = @menu["data"]["filteredProducts"]["products"][circles]["type"]
+sanitizemecaptain(@ProductType)
+
+if @ProductType == "Accessories" || @ProductType == "Apparel" || @ProductType == "Topicals" || @ProductType == "Edibles" || @ProductType == "Pre-Rolls"
+	next circles
+end
+
+
 @ProductBrand = @menu["data"]["filteredProducts"]["products"][circles]["brandName"]
 @DispensaryID = @menu["data"]["filteredProducts"]["products"][circles]["DispensaryID"]
 @ProductID = @menu["data"]["filteredProducts"]["products"][circles]["id"]
 @ProductImage = @menu["data"]["filteredProducts"]["products"][circles]["Image"]
-@ProductType = @menu["data"]["filteredProducts"]["products"][circles]["type"]
 @ProductQuantityOptions = @menu["data"]["filteredProducts"]["products"][circles]["Options"]
 @ProductMedicalPrices = @menu["data"]["filteredProducts"]["products"][circles]["medicalPrices"]
 @ProductMedicalSpecialPrices = @menu["data"]["filteredProducts"]["products"][circles]["medicalSpecialPrices"]
@@ -121,6 +130,9 @@ for circles in 0..@loopcounter-1
 @ProductQuantityAvailable = @menu["data"]["filteredProducts"]["products"][circles]["POSMetaData"]
 @ProductQuantityAvailableOverride = @menu["data"]["filteredProducts"]["products"][circles]["manualInventory"]
 
+
+
+
 sanitizemecaptain(@ProductQuantityOptions[0])
 sanitizemecaptain(@ProductQuantityOptions[1])
 sanitizemecaptain(@ProductQuantityOptions[2])
@@ -131,7 +143,12 @@ sanitizemecaptain(@ProductQuantityOptions[6])
 sanitizemecaptain(@ProductQuantityOptions[7])
 sanitizemecaptain(@ProductBrand)
 sanitizemecaptain(@ProductName)
-sanitizemecaptain(@ProductType)
+
+
+
+#
+#
+#
 
 #if circles == 8
 #pry
