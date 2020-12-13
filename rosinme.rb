@@ -90,7 +90,7 @@ end
 def open_the_gates(caneme)
 
 @browser.goto(caneme[:url])
-sleep(5)
+sleep(15)
 script = 'var performance = window.performance || window.mozPerformance || window.msPerformance || window.webkitPerformance || {}; return performance.getEntries().filter(e=>e.initiatorType=="xmlhttprequest")'
 stripper = @browser.execute_script(script)
 
