@@ -1,0 +1,444 @@
+INSERT INTO DispensaryTable (
+                                DispensaryCity,
+                                Delivery,
+                                DispensaryName,
+                                DispensaryID
+                            )
+                            VALUES (
+                                'Portland',
+                                0,
+                                'Mr. Nice Guy (Portland - SE Woodstock)',
+                                '89eEAwyWdNydEBzNE'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Electric Lettuce - Weilder',
+                                '5e7b9bd0bde0d600980d8982'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Homegrown Oregon (Beaverton)',
+                                'N8iYxkzdbDMkDo8je'
+                            ),
+                            (
+                                'Portland',
+                                1,
+                                'Farma',
+                                '5e7b9c65ff1d7400bedc3145'
+                            ),
+                            (
+                                'Portland',
+                                1,
+                                'Serra (Downtown Portland)',
+                                '5e838597f3b57c00c01db92c'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Electric Lettuce - Old Town',
+                                '5ee93c37e589a800e305cc8a'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Bridge City Collective - SE Portland',
+                                '5e6fc7f304402800778626a0'
+                            ),
+                            (
+                                'Portland',
+                                1,
+                                'Kaya Shack (Portland)',
+                                'zFk76cu6yK4swFRiN'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Broadway Cannabis Market',
+                                '5f971881dd531000d97c650b'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Pakalolo (Holgate Blvd)',
+                                'ENWqnaKeFuJQuQ9fH'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Cannabliss & Co (22nd & Burn)',
+                                'fHE6RfjtfNpwKKt5K'
+                            ),
+                            (
+                                'Portland',
+                                1,
+                                'Oregons Finest (Convention Center)',
+                                'ca5hYarcJmP5Qzqax'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Oregons Finest (Pearl Dispensary)',
+                                'QBoTaLFJW5EgJxRop'
+                            ),
+                            (
+                                'Portland',
+                                1,
+                                'Serra (Belmont St - Portland)',
+                                '5e7296f7d0e028008418f81c'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'MindRite',
+                                'f3DCDthdTRkPB2SBD'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Somewhere PDX',
+                                '5e7aa0f44f8e0900b7e04a79'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Papa Buds',
+                                'kHx9t88rZ6awXvAKa'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Electric Lettuce - Sellwood',
+                                '5f6a519a8fb97b0111dc3ae6'
+                            ),
+                            (
+                                'Portland',
+                                1,
+                                'Tetra Cannabis (Belmont)',
+                                '5e8cf2cf0b2768009a4ad93e'
+                            ),
+                            (
+                                'Portland',
+                                1,
+                                'Pot Mates',
+                                '5ecaf565cb9c1b00e1080b7c'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Nectar - Beaverton Hillsdale',
+                                'xRfhGAx5zict2K5r3'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Nectar - Sandy',
+                                'CKQGjaE9GBcsEqcGB'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'La Mota (NW Front)',
+                                'Y5ZmfrHiygRCpTW3A'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Nectar - Terwilliger',
+                                'zghKZ9q3dM5YxsnbG'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'VIBE - Amberlight',
+                                'TmS5Kcar8tEr8uxfJ'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Five Zero Trees - SW Portland',
+                                '5e7ba1326e447b60db4fe9bf'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Electric Lettuce - Foster - Powell',
+                                '5e7ba01f6e5f2100a7212fae'
+                            ),
+                            (
+                                'Portland',
+                                1,
+                                'Bridge City Collective - N WIlliams',
+                                '5e6fc7883f8979007a172c1e'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'La Mota (Johnson Creek)',
+                                'r9X4EhpBEzkhG7MGC'
+                            ),
+                            (
+                                'Portland',
+                                1,
+                                'Electric Lettuce - Alberta Arts District',
+                                '5e837decde402e00a87a0c32'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'La Mota (SE Portland)',
+                                'ZMaB6fPzHSfFqWngG'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'The New Amsterdam',
+                                'ze8wN7pb8Y2M9cP5B'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Foster Buds - NE Glisan St',
+                                '5e7b9faa4d6325009a878672'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Five Zero Trees - Dekum St',
+                                '5e7ba1aaed7b5400afa9c7f0'
+                            ),
+                            (
+                                'Portland',
+                                1,
+                                'The Peoples Dispensary (Portland)',
+                                '5e6be93acdc3af00712fe275'
+                            ),
+                            (
+                                'Portland',
+                                1,
+                                'Top Hat Express',
+                                '5fa5d4a1e7895000ece0b666'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Electric Lettuce - Cedar Hills',
+                                '5e7b8dfe49f75e00bbdb7b9e'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Five Zero Trees (East Portland)',
+                                '5eb33c2258a5f300e86f6ac5'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Chalice Farms (Downtown)',
+                                'cgooXmKenGs48qvZf'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Cannabliss (Firestation 23)',
+                                'GbjYW7MF3mBtNogmk'
+                            ),
+                            (
+                                'Portland',
+                                1,
+                                'Truly Pure',
+                                '5e7c0b6dd4bcd700b4a3be73'
+                            ),
+                            (
+                                'Portland',
+                                1,
+                                'Diem Delivery',
+                                'kgtGfbPx92Z2zMb8X'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Attis Trading Co (Gladstone)',
+                                'gM9rZFpEyZWL36B6R'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Attis Trading Co (Barbur)',
+                                'DCernomKcb4hPQgW9'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'TJs on Powell',
+                                'FeADLqAA74sqwWuNb'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Cannabliss Co (The Blvd)',
+                                'zaszMhfCbuLdD3Dpb'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Deanz Greenz (Foster)',
+                                'Yn3jEf88Eqa3APASZ'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Left Coast Connection',
+                                'mrRCfw9orrg6ZPQWK'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'SWED CO',
+                                '5ea22aff790b8f00dd98f598'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Natural RXemedies',
+                                'zBKaBM3hTpspDwMED'
+                            ),
+                            (
+                                'Portland',
+                                1,
+                                'Oregrown (Portland)',
+                                'D8RQfZ6Kftnxeof2P'
+                            ),
+                            (
+                                'Portland',
+                                1,
+                                'Chalice Farms (Powell)',
+                                'zKjLfByt2tvgmiQvt'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Deanz Greenz (Sandy)',
+                                'SSexAhLYfSzoLqm9o'
+                            ),
+                            (
+                                'Portland',
+                                1,
+                                'Urban Farmacy',
+                                '5NFnoMgMWbTrT6Ftb'
+                            ),
+                            (
+                                'Bend',
+                                0,
+                                'Oregrown',
+                                'SbnMPug4uHJZu5tG3'
+                            ),
+                            (
+                                'Bend',
+                                0,
+                                'CannaVida',
+                                'Qrd75dsXJoyDKk5N2'
+                            ),
+                            (
+                                'Bend',
+                                0,
+                                'Substance (Division Street)',
+                                'LS66XHqeBcc2evj7m'
+                            ),
+                            (
+                                'Bend',
+                                0,
+                                'Mr. Nice Guy',
+                                'wiPzqSXJvgE6d9eTC'
+                            ),
+                            (
+                                'Bend',
+                                0,
+                                'Top Shelf Medicine',
+                                '5f6cd5227fc9eb00e61861d6'
+                            ),
+                            (
+                                'Bend',
+                                0,
+                                'Fyre',
+                                '2h6ho6sgw8tz8R6FQ'
+                            ),
+                            (
+                                'Bend',
+                                0,
+                                'Tokyo Starfish (South)',
+                                '5e73fb4fc33c1b006bdab6cc'
+                            ),
+                            (
+                                'Bend',
+                                0,
+                                'DiamondTREE West',
+                                'XakCpASMTpXZSwruB'
+                            ),
+                            (
+                                'Bend',
+                                0,
+                                'Dr. Jolly''s',
+                                'A9rxwr3podA5vMFJK'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Archive',
+                                '60a44a64a8d25500d8ddf30e'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'The Dispensary on 52nd',
+                                '5e790d64ebd56000a2232670'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Curaleaf (OR) - Portland',
+                                '5fd14af4568b4a00c085c55a'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Arcanna',
+                                '6058fc09a48ce600e39d3ea4'
+                            ),
+                            (
+                                'Portland',
+                                1,
+                                'Mongoose Cannabis Co.',
+                                'zhe4RsuA8HeFyBTEJ'
+                            ),
+                            (
+                                'Portland',
+                                0,
+                                'Rose Budz PDX',
+                                '60dcdb5bea379000a7a73d0d'
+                            ),
+                            (
+                                'Bend',
+                                0,
+                                'Substance (South 97)',
+                                'ayvhGbpbZByWWWYmW'
+                            ),
+                            (
+                                'Bend',
+                                0,
+                                'Substance (Empire Ave.)',
+                                '3WjnYqqC9wjQFpBFX'
+                            ),
+                            (
+                                'Bend',
+                                0,
+                                'Oregon Euphorics',
+                                'w5rAz2WPTWdZbcDod'
+                            ),
+                            (
+                                'Bend',
+                                0,
+                                'The Vth LMNT - Bend',
+                                'mAnBErqynt3tz77uA'
+                            );

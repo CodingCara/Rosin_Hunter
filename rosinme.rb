@@ -14,6 +14,7 @@ require 'watir'
 @are_we_created_cbd = 0
 @which_category = [0 => "products/seeds", 1 => "products/flower", 2 => "products/concentrates", 3 => "products/clones"]
 @category_counter = 0
+@we_have_reached_the_end = false
 
 
 @the_key, @ProductBrand, @ProductType, @ProductSubCategory, @ProductName, @loopcounter = String.new
@@ -52,7 +53,7 @@ require 'watir'
 @dispensaries << {:id => "5e837decde402e00a87a0c32", :name => "Electric Lettuce - Alberta Arts District", :url => "https://dutchie.com/dispensaries/electric-lettuce-alberta/"}
 @dispensaries << {:id => "ZMaB6fPzHSfFqWngG", :name => "La Mota (SE Portland)", :url => "https://dutchie.com/dispensaries/la-mota-se-portland/"}
 @dispensaries << {:id => "ze8wN7pb8Y2M9cP5B", :name => "The New Amsterdam", :url => "https://dutchie.com/dispensaries/the-new-amsterdam/"}
-@dispensaries << {:id => "5e7b9faa4d6325009a878672", :name => "Foster Buds - NE Glisan St", :url => "https://dutchie.com/dispensaries/foster-buds-glisan-st/"}
+#@dispensaries << {:id => "5e7b9faa4d6325009a878672", :name => "Foster Buds - NE Glisan St", :url => "https://dutchie.com/dispensaries/foster-buds-glisan-st/"}
 @dispensaries << {:id => "5e7ba1aaed7b5400afa9c7f0", :name => "Five Zero Trees - Dekum St", :url => "https://dutchie.com/dispensaries/five-zero-trees-dekum-st/"}
 @dispensaries << {:id => "5e6be93acdc3af00712fe275", :name => "The People's Dispensary (Portland)", :url => "https://dutchie.com/dispensaries/peoples-dispensary-portland/"}
 @dispensaries << {:id => "5fa5d4a1e7895000ece0b666", :name => "Top Hat Express", :url => "https://dutchie.com/dispensaries/top-hat-express1/"}
@@ -73,21 +74,26 @@ require 'watir'
 @dispensaries << {:id => "D8RQfZ6Kftnxeof2P", :name => "Oregrown (Portland)", :url => "https://dutchie.com/dispensaries/oregrown-portland/"}
 @dispensaries << {:id => "zKjLfByt2tvgmiQvt", :name => "Chalice Farms (Powell)", :url => "https://dutchie.com/dispensaries/chalice-farms-powell/"}
 @dispensaries << {:id => "5NFnoMgMWbTrT6Ftb", :name => "Urban Farmacy", :url => "https://dutchie.com/dispensaries/urban-farmacy/"}
-#@dispensaries << {:id => "5NFnoMgMWbTrT6Ftb", :name => "Archive", :url => "https://dutchie.com/dispensaries/archive-dispensary"}
-#@dispensaries << {:id => "5NFnoMgMWbTrT6Ftb", :name => "The Dispensary on 52nd", :url => "https://dutchie.com/dispensaries/the-dispensary-on-52nd"}
-#@dispensaries << {:id => "5NFnoMgMWbTrT6Ftb", :name => "Curaleaf (OR) - Portland", :url => "https://dutchie.com/dispensaries/curaleaf-portland"}
-#@dispensaries << {:id => "5NFnoMgMWbTrT6Ftb", :name => "Arcanna", :url => "https://dutchie.com/dispensaries/arcanna1"}
-#@dispensaries << {:id => "5NFnoMgMWbTrT6Ftb", :name => "Mongoose Cannabis Co.", :url => "https://dutchie.com/dispensaries/mongoose-cannabis"}
-#@dispensaries << {:id => "5NFnoMgMWbTrT6Ftb", :name => "Rose Budz PDX", :url => "https://dutchie.com/dispensaries/rosebud-pdx"}
+@dispensaries << {:id => "60a44a64a8d25500d8ddf30e", :name => "Archive", :url => "https://dutchie.com/dispensaries/archive-dispensary/"}
+@dispensaries << {:id => "5e790d64ebd56000a2232670", :name => "The Dispensary on 52nd", :url => "https://dutchie.com/dispensaries/the-dispensary-on-52nd/"}
+@dispensaries << {:id => "5fd14af4568b4a00c085c55a", :name => "Curaleaf (OR) - Portland", :url => "https://dutchie.com/dispensaries/curaleaf-portland/"}
+@dispensaries << {:id => "6058fc09a48ce600e39d3ea4", :name => "Arcanna", :url => "https://dutchie.com/dispensaries/arcanna1/"}
+@dispensaries << {:id => "zhe4RsuA8HeFyBTEJ", :name => "Mongoose Cannabis Co.", :url => "https://dutchie.com/dispensaries/mongoose-cannabis/"}
+@dispensaries << {:id => "60dcdb5bea379000a7a73d0d", :name => "Rose Budz PDX", :url => "https://dutchie.com/dispensaries/rosebud-pdx/"}
 @dispensaries << {:id => "SbnMPug4uHJZu5tG3", :name => "Oregrown (Bend)", :url => "https://dutchie.com/dispensaries/oregrown/"} #Bend
 @dispensaries << {:id => "Qrd75dsXJoyDKk5N2", :name => "CannaVida (Bend)", :url => "https://dutchie.com/dispensaries/cannavida/"} #Bend
 @dispensaries << {:id => "LS66XHqeBcc2evj7m", :name => "Substance (Division Street) (Bend)", :url => "https://dutchie.com/dispensaries/substance-division/"} #Bend
 @dispensaries << {:id => "wiPzqSXJvgE6d9eTC", :name => "Mr. Nice Guy (Bend)", :url => "https://dutchie.com/dispensaries/mr-nice-guy-bend/"} #Bend
 @dispensaries << {:id => "5f6cd5227fc9eb00e61861d6", :name => "Top Shelf Medicine (Bend)", :url => "https://dutchie.com/dispensaries/top-shelf-medicine-bend/"} #Bend
 @dispensaries << {:id => "2h6ho6sgw8tz8R6FQ", :name => "Fyre (Bend)", :url => "https://dutchie.com/dispensaries/Fyre/"} #Bend
-@dispensaries << {:id => "5e73fb4fc33c1b006bdab6cc", :name => "Tokyo Starfish (South) (Bend)", :url => "https://dutchie.com/dispensaries/tokyo-starfish-south/"} #Bend
+@dispensaries << {:id => "5e73fb4fc33c1b006bdab6cc", :name => "Tokyo Starfish (South)", :url => "https://dutchie.com/dispensaries/tokyo-starfish-south/"} #Bend
 @dispensaries << {:id => "XakCpASMTpXZSwruB", :name => "DiamondTREE West (Bend)", :url => "https://dutchie.com/dispensaries/diamondtree-west/"} #Bend
 @dispensaries << {:id => "A9rxwr3podA5vMFJK", :name => "Dr. Jolly's (Bend)", :url => "https://dutchie.com/dispensaries/dr-jollys/"} #Bend
+@dispensaries << {:id => "ayvhGbpbZByWWWYmW", :name => "Substance (South 97)", :url => "https://dutchie.com/dispensaries/substance-3rd-st/"} #Bend
+@dispensaries << {:id => "3WjnYqqC9wjQFpBFX", :name => "Substance (Empire Ave.)", :url => "https://dutchie.com/dispensaries/substance-empire/"} #Bend
+@dispensaries << {:id => "w5rAz2WPTWdZbcDod", :name => "Oregon Euphorics", :url => "https://dutchie.com/dispensaries/oregon-euphorics/"} #Bend
+@dispensaries << {:id => "mAnBErqynt3tz77uA", :name => "The Vth LMNT - Bend", :url => "https://dutchie.com/dispensaries/the-vth-lmnt/"} #Bend
+
 
 
 DB = SQLite3::Database.open("dutchie_test1.db")
@@ -95,14 +101,21 @@ DB = SQLite3::Database.open("dutchie_test1.db")
 def menu_dump(caneme)
 
 @response = HTTParty.get(@the_key)
+sleep(10)
 @menu = JSON.parse(@response.body)
 
 end
 
 def sacrificial_lamb()
 
-@browser = Watir::Browser.new :chrome#, headless: true
-puts "Opened Browser!".green
+@browser = Watir::Browser.new :chrome, headless: true
+puts "Opened Browser!"#.green
+
+end
+
+def have_we_reached_the_end()
+
+@we_have_reached_the_end = @browser.text.include?('any products that match your search. Try again!')
 
 end
 
@@ -110,7 +123,7 @@ end
 def open_the_gates(caneme, which_category)
 puts caneme[:url] + which_category
 @browser.goto(caneme[:url] + which_category)
-sleep(7)
+sleep(5)
 #@browser.refresh
 #sleep(10)
 script = 'var performance = window.performance || window.mozPerformance || window.msPerformance || window.webkitPerformance || {}; return performance.getEntries().filter(e=>e.initiatorType=="fetch")'
